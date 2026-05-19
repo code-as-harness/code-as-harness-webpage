@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code as Agent Harness</title>
+    <meta
+      name="description"
+      content="Code as Agent Harness: toward executable, verifiable, and stateful agent systems."
+    />
+    <meta name="theme-color" content="#090b10" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <canvas id="code-rain" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <main>
+      <section class="hero" aria-labelledby="paper-title">
+        <div class="hero-copy">
+          <p class="kicker">Preprint 2026 · Survey</p>
+          <h1 id="paper-title">Code as Agent Harness</h1>
+          <p class="subtitle">Toward Executable, Verifiable, and Stateful Agent Systems</p>
+          <p class="dek">
+            A code-centered view of agentic AI: code is not only generated output, but the
+            operational substrate for reasoning, acting, environment modeling, execution
+            feedback, and multi-agent coordination.
+          </p>
+
+          <div class="actions" aria-label="Paper links">
+            <a class="button primary" href="https://arxiv.org/pdf/2605.18747" target="_blank" rel="noreferrer">Paper</a>
+            <a class="button" href="https://arxiv.org/abs/2605.18747" target="_blank" rel="noreferrer">arXiv</a>
+            <a class="button" href="https://github.com/YennNing/Awesome-Code-as-Agent-Harness-Papers" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="button" href="#cite">Cite</a>
+          </div>
+        </div>
+
+        <div class="terminal-card" aria-label="Animated code harness terminal">
+          <div class="terminal-top">
+            <span></span>
+            <span></span>
+            <span></span>
+            <p>agent-harness.sh</p>
+          </div>
+          <pre id="terminal-output" aria-live="polite"></pre>
+        </div>
+      </section>
+
+      <section class="authors" aria-label="Authors">
+        <p>
+          Xuying Ning<sup>1†</sup>, Katherine Tieu<sup>1†</sup>, Dongqi Fu<sup>2†</sup>,
+          Tianxin Wei<sup>1†</sup>, Zihao Li<sup>1†</sup>, Yuanchen Bei<sup>1†</sup>,
+          Jiaru Zou<sup>3</sup>, Mengting Ai<sup>1</sup>, Zhining Liu<sup>1</sup>,
+          Ting-Wei Li<sup>1</sup>, Lingjie Chen<sup>1</sup>, Yanjun Zhao<sup>1</sup>,
+          Ke Yang<sup>1</sup>, Bingxuan Li<sup>1</sup>, Cheng Qian<sup>1</sup>,
+          Gaotang Li<sup>1</sup>, Xiao Lin<sup>1</sup>, Zhichen Zeng<sup>1</sup>,
+          Ruizhong Qiu<sup>1</sup>, Sirui Chen<sup>1</sup>, Yifan Sun<sup>1</sup>,
+          Xiyuan Yang<sup>1</sup>, Ruida Wang<sup>1</sup>, Rui Pan<sup>1</sup>,
+          Chenyuan Yang<sup>1</sup>, Dylan Zhang<sup>1</sup>, Liri Fang<sup>1</sup>,
+          Zikun Cui<sup>2</sup>, Yang Cao<sup>2</sup>, Pan Chen<sup>2</sup>,
+          Dorothy Sun<sup>2</sup>, Ren Chen<sup>2</sup>, Mahesh Srinivasan<sup>2</sup>,
+          Nipun Mathur<sup>2</sup>, Yinglong Xia<sup>2</sup>, Hong Li<sup>2</sup>,
+          Hong Yan<sup>2</sup>, Pan Lu<sup>3</sup>, Lingming Zhang<sup>1</sup>,
+          Tong Zhang<sup>1</sup>, Hanghang Tong<sup>1§</sup>, Jingrui He<sup>1§</sup>
+        </p>
+        <p class="affiliations">
+          <sup>1</sup>University of Illinois Urbana-Champaign · <sup>2</sup>Meta ·
+          <sup>3</sup>Stanford University · <sup>†</sup>Core Contributor ·
+          <sup>§</sup>Corresponding Author
+        </p>
+      </section>
+
+      <section class="stats" aria-label="Survey stats">
+        <div>
+          <strong>3</strong>
+          <span>Connected Layers</span>
+        </div>
+        <div>
+          <strong>6+</strong>
+          <span>Application Areas</span>
+        </div>
+        <div>
+          <strong>102</strong>
+          <span>PDF Pages</span>
+        </div>
+        <div>
+          <strong>2026</strong>
+          <span>Survey Roadmap</span>
+        </div>
+      </section>
+
+      <section class="section-grid" aria-labelledby="abstract-heading">
+        <div>
+          <p class="section-label">Abstract</p>
+          <h2 id="abstract-heading">Code becomes the runtime medium for agents.</h2>
+        </div>
+        <p class="body-copy">
+          Recent LLMs have become strong code generators, but emerging agentic systems
+          use code for more than final answers. This survey frames code as an agent
+          harness: a unified infrastructure layer for agent reasoning, action,
+          environment modeling, feedback-driven control, and verification. It studies
+          how code connects agents to executable steps, durable state, reusable tools,
+          tests, traces, repositories, and multi-agent workflows.
+        </p>
+      </section>
+
+      <section class="layers" aria-labelledby="layers-heading">
+        <p class="section-label">Taxonomy</p>
+        <h2 id="layers-heading">Three Layers of Code as Harness</h2>
+        <div class="layer-track">
+          <article class="layer-card">
+            <span>01</span>
+            <h3>Harness Interface</h3>
+            <p>
+              Code connects agents to reasoning, action, and environment modeling:
+              executable reasoning traces, programmable actions, DOM/API interfaces,
+              simulators, tests, and state representations.
+            </p>
+            <ul>
+              <li>Reasoning substrate</li>
+              <li>Action interface</li>
+              <li>Environment representation</li>
+            </ul>
+          </article>
+          <article class="layer-card">
+            <span>02</span>
+            <h3>Harness Mechanisms</h3>
+            <p>
+              Planning, memory, tool use, control, and optimization sustain agents over
+              long-horizon execution. Failures become feedback for repair rather than
+              dead ends.
+            </p>
+            <ul>
+              <li>Planning and decomposition</li>
+              <li>Working and long-term memory</li>
+              <li>Tests, traces, and static analysis</li>
+            </ul>
+          </article>
+          <article class="layer-card">
+            <span>03</span>
+            <h3>Scaling the Harness</h3>
+            <p>
+              Shared code artifacts allow multiple agents to coordinate, review, test,
+              debate, red-team, and verify progress inside a common repository or
+              workflow state.
+            </p>
+            <ul>
+              <li>Manager, planner, coder, reviewer, tester roles</li>
+              <li>Centralized and distributed workflows</li>
+              <li>Shared state and collective verification</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="applications" aria-labelledby="apps-heading">
+        <div>
+          <p class="section-label">Applications</p>
+          <h2 id="apps-heading">Where the harness shows up</h2>
+        </div>
+        <div class="chips">
+          <span>Coding Assistants</span>
+          <span>GUI / OS Agents</span>
+          <span>Embodied Agents</span>
+          <span>Scientific Discovery</span>
+          <span>Personalization</span>
+          <span>Recommendation</span>
+          <span>DevOps</span>
+          <span>Enterprise Workflows</span>
+        </div>
+      </section>
+
+      <section class="open-problems" aria-labelledby="problems-heading">
+        <p class="section-label">Open Problems</p>
+        <h2 id="problems-heading">Harness engineering is the hard part.</h2>
+        <div class="problem-grid">
+          <article>
+            <h3>Evaluation beyond final success</h3>
+            <p>Intermediate states, traces, repair attempts, and safety checks need first-class metrics.</p>
+          </article>
+          <article>
+            <h3>Verification with incomplete feedback</h3>
+            <p>Agents must act under partial tests, noisy execution signals, and hidden environment state.</p>
+          </article>
+          <article>
+            <h3>Regression-free improvement</h3>
+            <p>Harnesses should learn from failure without silently breaking previously working behavior.</p>
+          </article>
+          <article>
+            <h3>Shared state across agents</h3>
+            <p>Coordination depends on durable memory, repository state, review artifacts, and permissions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="cite" class="citation" aria-labelledby="cite-heading">
+        <div>
+          <p class="section-label">Citation</p>
+          <h2 id="cite-heading">BibTeX</h2>
+        </div>
+        <div class="code-box">
+          <button id="copy-citation" type="button">Copy</button>
+          <pre>@misc{ning2026codeagentharness,
+  title         = {Code as Agent Harness: Toward Executable, Verifiable, and Stateful Agent Systems},
+  author        = {Xuying Ning and Katherine Tieu and Dongqi Fu and Tianxin Wei and Zihao Li and Yuanchen Bei and Jiaru Zou and Mengting Ai and Zhining Liu and Ting-Wei Li and Lingjie Chen and Yanjun Zhao and Ke Yang and Bingxuan Li and Cheng Qian and Gaotang Li and Xiao Lin and Zhichen Zeng and Ruizhong Qiu and Sirui Chen and Yifan Sun and Xiyuan Yang and Ruida Wang and Rui Pan and Chenyuan Yang and Dylan Zhang and Liri Fang and Zikun Cui and Yang Cao and Pan Chen and Dorothy Sun and Ren Chen and Mahesh Srinivasan and Nipun Mathur and Yinglong Xia and Hong Li and Hong Yan and Pan Lu and Lingming Zhang and Tong Zhang and Hanghang Tong and Jingrui He},
+  year          = {2026},
+  eprint        = {2605.18747},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2605.18747},
+}</pre>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>
